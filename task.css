@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:darkgray;
+    position: relative;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 160px; /* Adjust the bottom padding to make space for the footer */
+}
+
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.image {
+    flex: 1 0 30%; /* Adjust this value for responsive layout */
+    margin: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.image .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    margin-bottom: 10px; /* Add margin bottom to separate footer from content */
+}
+
+.footer-menu a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    border-color: antiquewhite;
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        flex: 1 0 100%; /* Make images full width on smaller screens */
+    }
+    .container {
+        padding-bottom: 220px; /* Adjust bottom padding for smaller screens */
+    }
+}
+/* Add this CSS for animation */
+@keyframes colorChange {
+    0% { color: #ffcc00; }
+    25% { color: #ff6666; }
+    50% { color: #66ff66; }
+    75% { color: #6699ff; }
+    100% { color: #ffcc00; }
+}
+
+header h1 {
+    animation: colorChange 5s infinite;
+}
+
